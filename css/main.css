@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Maven+Pro&family=Poor+Story&display=swap');
+a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+h1 {
+    font-family: 'Poor Story', cursive;
+    line-height: 20px;
+    text-align:center;
+}
+.how {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+}
+/* 닫기가 가능한 커스텀 오버레이 CSS > 실패 */
+/* .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+.wrap * {padding: 0;margin: 0;}
+.wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+.wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+.info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
+.info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+.info .close:hover {cursor: pointer;}
+.info .body {position: relative;overflow: hidden;}
+.info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
+.desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
+.info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
+.info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+.info .link {color: #5085BB;} */
+
+.customInfo {
+    padding:8px;
+    font-family: 'Poor Story', cursive;
+    background-color: rgb(255, 224, 132);
+    font-size: 13px;
+}
+.category {
+    display: block;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
+}
+.categoryblock {
+    display:block; 
+    text-align: center; 
+    float:left;
+    width:22%; 
+    height:100%;
+    font-family: 'Poor Story', cursive;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.show {
+    background-color:rgb(195, 125, 246);
+    color: whitesmoke; 
+    font-family: 'Poor Story', cursive; 
+    padding: 10px; 
+    font-size: 40px;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    border-radius:10px;
+}
+.menu-bar {
+    background-color: rgb(233, 224, 212);
+    overflow: auto;
+}
+.menu-bar a{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    font-size: 15px;
+    float: right;
+    font-family: 'Maven Pro', sans-serif;
+}
+.menu-bar div{
+    color: rgb(51, 51, 51);
+    font-family: 'Maven Pro', sans-serif;
+    float: left;
+    margin-left: 12px;
+    padding : 12px;
+    font-size: 28px;
+    display: inline-block;
+}
+.menu-bar a:hover {
+    background-color: rgb(95, 210, 210);
+    color : whitesmoke;
+}
+.dropText {text-shadow : 1px 1px whitesmoke;}
+.dropText2 {text-shadow : 2px 2px rgb(176, 176, 176);}
+.search_btn {
+    position: absolute;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    margin: 90px 0 30px 0;
+    padding: 5px;
+    overflow-y:auto;
+    z-index: 1;
+    display: block;
+    background-color: whitesmoke;
+    color: rgb(51, 51, 51);
+    border: 0;
+    outline: 0;
+}
+.MP_btn {
+    position: absolute;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    margin: 125px 0 30px 0;
+    padding: 5px;
+    overflow-y:auto;
+    z-index: 1;
+    display: block;
+    background-color: whitesmoke;
+    color: rgb(51, 51, 51);
+    border: 0;
+    outline: 0;
+}
+.CM_btn {
+    position: absolute;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    margin: 160px 0 30px 0;
+    padding: 5px;
+    overflow-y:auto;
+    z-index: 1;
+    display: block;
+    background-color: whitesmoke;
+    color: rgb(51, 51, 51);
+    border: 0;
+    outline: 0;
+}
+.main_wrap, .main_wrap * {
+    margin : 0;
+    padding: 0;
+    font-family: 'Maven Pro', sans-serif;
+    display: none;
+}
+.main_wrap {font-family:'Poor Story', cursive; position: relative; width: 100%; height: 500px; }
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active {
+    color:rgb(51, 51, 51);
+    text-decoration: none;
+}
+#menu_wrap {
+    font-family:'Poor Story', cursive;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    margin: 70px 0 30px 15px;
+    padding: 5px;
+    overflow-y:auto;
+    background:whitesmoke(255, 255, 255, 0.7);
+    z-index: 1;
+    font-size:12px;
+    border-radius:10px;
+    display: none;
+}    
+#markerCB {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    margin: 70px 0 550px 15px;
+    padding: 5px;
+    overflow-y:auto;
+    background:whitesmoke(255, 255, 255, 0.7);
+    z-index: 1;
+    font-size:12px;
+    border-radius:10px;
+    display: none;
+}   
+.bg_white {background:whitesmoke}
+#menu_wrap hr {
+    display:block;
+    height:1px;
+    border: 0;
+    border-top: 2px solid rgb(51, 51, 51);
+    margin: 3px 0;
+}
+#menu_wrap .option{text-align: center;}
+#menu_wrap .option p {margin:10px 0;}  
+#menu_wrap .option button {margin-left:5px; color: whitesmoke; background-color: rgb(95, 210, 210); border: 0; outline: 0; height: 23px;}
+#placesList li {list-style: none;}
+#placesList .item {position:relative;border-bottom:1px solid #888;overflow: hidden;cursor: pointer;min-height: 65px;}
+#placesList .item span {display: block;margin-top:4px;}
+#placesList .item h5, #placesList .item .info {text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+#placesList .item .info{padding:10px 0 10px 55px;}
+#placesList .info .gray {color:#8a8a8a;}
+#placesList .info .jibun {padding-left:26px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;}
+#placesList .info .tel {color:#009900;}
+

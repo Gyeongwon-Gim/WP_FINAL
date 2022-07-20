@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Barrier - Free Map</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://kit.fontawesome.com/a50a312e3f.js" crossorigin="anonymous"></script>
+    </head>
+        <div class = 'menu-bar'>
+            <div class= "dropText"><i class="fa-solid fa-wheelchair-move" style="color: rgb(236, 88, 48); margin-right: 12px;"></i><strong><strong>   Barrier-Free Map</strong></strong></div>
+            <a href=".\index.html" style="margin-right: 50px;"><i class="fa-solid fa-map-location-dot"></i> Map </a>
+            <a href=".\how.html"><i class="fa-solid fa-book-bookmark"></i> How </a>
+            <a href=".\home.html"><i class="fa-solid fa-house-chimney"></i> Home</a>
+        </div>
+        <div class="map_wrap">
+            <div id="map" style="width: 100%; height: 90vh"></div>
+            <button id="search" class="search_btn" onclick="checkmarker.style.display='none'; menu_wrap.style.display='block'; search.style.display='none'; myposition.style.display='none';"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="myposition" class="MP_btn" onclick="myPosition()"><i class="fa-solid fa-location-crosshairs"></i></button>
+            <button id="checkmarker" class="CM_btn" onclick="markerCB.style.display='block'; search.style.display='none'; myposition.style.display='none'; checkmarker.style.display='none';"><i class="fa-solid fa-location-dot"></i></button>
+            <div id="menu_wrap" class = "bg_white">
+                <div class = "option">
+                    <div>
+                        <form onsubmit="takeKeyword(); return false;">
+                            <i id="back1" class="fa-solid fa-square-xmark" onclick="menu_wrap.style.display='none'; search.style.display='block'; checkmarker.style.display='block'; myposition.style.display='block';" 
+                            style="font-size:25px; position: absolute; top: 0; left: 0; margin: 3px 0 30px 10px; padding: 5px; color : rgb(95, 210, 210);"></i>
+                            <input type = "text" id="keyword" size="15" style="margin-top: 5px; margin-bottom: 5px; margin-left: 30px;" value="키워드를 입력하세요.">
+                            <button class="btn" type="submit">search</button>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <ul id="placeList"></ul>
+                <div id="pagination"></div>
+            </div>
+            <div id="markerCB" class="bg_white">
+                <form action="">
+                    <div style="width:30px; height:30px; float:left; margin-top: 5px; margin-left: 5px;">
+                        <i id="back2" class="fa-solid fa-square-xmark" onclick="search.style.display='block'; markerCB.style.display='none'; myposition.style.display='block'; checkmarker.style.display='block';" 
+                                style="font-size:25px; color : rgb(95, 210, 210);"></i>
+                    </div>
+                    <div class="categoryblock"><img class="category" src="imgs/museum.png">문화시설<br><input type="checkbox" name="category" value="14" onclick="checkBox()"></div>
+                    <div class="categoryblock"><img class="category" src="imgs/sleeping.png">숙박시설<br><input type="checkbox" name="category" value="32" onclick="checkBox()"></div>
+                    <div class="categoryblock"><img class="category" src="imgs/shop.png">쇼핑<br><input type="checkbox" name="category" value="38" onclick="checkBox()"></div>
+                    <div class="categoryblock"><img class="category" src="imgs/restaurant.png">음식점<br><input type="checkbox" name="category" value="39" onclick="checkBox()"></div>
+                </form>
+            </div>
+        </div>
+            <!-- contentTypeId 
+            14 : 문화
+            32 : 숙박
+            38 : 쇼핑
+            39 : 음식 -->
+            <!-- <form action="">
+                <input type="checkbox" name="category" value="14" onclick="checkBox()">문화시설
+                <input type="checkbox" name="category" value="32" onclick="checkBox()">숙박시설
+                <input type="checkbox" name="category" value="38" onclick="checkBox()">쇼핑
+                <input type="checkbox" name="category" value="39" onclick="checkBox()">음식점
+            </form> -->
+        <div id="map" style="width: 100%; height: 89vh"></div>
+        <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=8c01405af7776f1bebaa741aee401d5d&libraries=clusterer"></script>
+        <script src="js\main.js"></script>
+        <script src="js\marker.js"></script>
+        <!-- <script src="js\lab.js"></script> -->
+        <script src="js\search.js"></script>
+
+    </body>
+</html>
